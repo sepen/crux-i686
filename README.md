@@ -62,7 +62,7 @@ sudo mount --rbind /dev /mnt/dev
 sudo chroot /mnt /bin/bash
 ```
 
-### 2. Configure port collections
+### 2. Configure port collections
 
 Edit `/etc/prt-get.conf` and add the i686 overlays before the default collections so that they take precedence:
 
@@ -81,7 +81,7 @@ ports -u
 prt-get sysup
 ```
 
-3. Build and install software
+### 3. Build and install software
 
 Use the regular CRUX tools (prt-get, pkgmk, etc.) to build packages.
 The overlays ensure proper compiler flags and dependencies for 32-bit systems.
