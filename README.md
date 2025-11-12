@@ -121,7 +121,7 @@ This project’s only deviation is architecture support, not philosophy.
 ## License
 
 All CRUX base ports remain under their respective upstream licenses.
-Overlay modifications and scripts are released under the MIT License.
+Overlay modifications and scripts are released under the GPLv3 License.
 
 
 ---
