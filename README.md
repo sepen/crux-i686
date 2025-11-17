@@ -6,7 +6,7 @@ This project provides a **root filesystem image** and a set of **port overlays**
 It is intended for hobbyists, retrocomputing enthusiasts, and anyone who still has reliable old hardware capable of running a lightweight and source-based Linux system.
 
 **Download the root filesystem:**  
-[crux-i686-3.8-rootfs.tar.xz](https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8-i686-rootfs.tar.xz)
+[crux-i686-3.8.rootfs.tar.xz](https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686-rootfs.tar.xz)
 
 
 ---
@@ -20,14 +20,14 @@ The **CRUX-i686** project reintroduces a functional i686 environment based on **
 This release includes:
 
 - A prebuilt root filesystem:  
-  **`crux-i686-3.8-rootfs.tar.xz`** – a minimal CRUX 3.8 base system bootable on i686 CPUs.
+  **`crux-i686-3.8.rootfs.tar.xz`** – a minimal CRUX 3.8 base system bootable on i686 CPUs.
 - Architecture-specific port overlays:
   - [core-i686](https://github.com/sepen/crux-ports-core-i686) — base system ports adapted for i686  
   - [opt-i686](https://github.com/sepen/crux-ports-opt-i686) — optional and userland software ports  
   - [xorg-i686](https://github.com/sepen/crux-ports-xorg-i686) — X.Org and graphical environment ports  
 
 These overlays contain adjusted `Pkgfile`s and build options tuned for the i686 instruction set and older toolchains.  
-They come **preinstalled and preconfigured** in the `crux-i686-3.8-rootfs.tar.xz` image.
+They come **preinstalled and preconfigured** in the `crux-i686-3.8.rootfs.tar.xz` image.
 
 
 ---
@@ -54,11 +54,12 @@ You can deploy CRUX-i686 in a VM, chroot, or directly on hardware that supports 
 Example (for a chroot or disk install):
 
 ```shell
-curl -O https://example.com/crux-i686-3.8-rootfs.tar.xz
-sudo tar xpvf crux-i686-3.8-rootfs.tar.xz -C /mnt
-sudo mount -t proc /proc /mnt/proc
-sudo mount --rbind /sys /mnt/sys
-sudo mount --rbind /dev /mnt/dev
+curl -sS -L -O https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686-rootfs.tar.xz
+sudo tar xvf crux-i686-3.8-rootfs.tar.xz -C /mnt
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+sudo mount --bind /run /mnt/run
+sudo mount --bind /dev /mnt/dev
 sudo chroot /mnt /bin/bash
 ```
 
