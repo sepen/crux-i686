@@ -113,6 +113,7 @@ CRUX-i686 follows the same ideals as upstream CRUX:
 - No unnecessary patches
 - Transparent build process
 - Easy to understand and maintain system layout
+
 This project’s only deviation is architecture support, not philosophy.
 
 
