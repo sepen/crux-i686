@@ -6,7 +6,7 @@ This project provides a **root filesystem image** and a set of **port overlays**
 It is intended for hobbyists, retrocomputing enthusiasts, and anyone who still has reliable old hardware capable of running a lightweight and source-based Linux system.
 
 **Download the root filesystem:**  
-[crux-i686-3.8.rootfs.tar.xz](https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686-rootfs.tar.xz)
+[crux-i686-3.8.rootfs.tar.xz](https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686.rootfs.tar.xz)
 
 
 ---
@@ -54,8 +54,8 @@ You can deploy CRUX-i686 in a VM, chroot, or directly on hardware that supports 
 Example (for a chroot or disk install):
 
 ```shell
-curl -sS -L -O https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686-rootfs.tar.xz
-sudo tar xvf crux-i686-3.8-rootfs.tar.xz -C /mnt
+curl -sS -L -O https://github.com/sepen/crux-i686/releases/download/3.8/crux-3.8.i686.rootfs.tar.xz
+sudo tar xvf crux-i686-3.8.rootfs.tar.xz -C /mnt
 sudo mount --bind /proc /mnt/proc
 sudo mount --bind /sys /mnt/sys
 sudo mount --bind /run /mnt/run
